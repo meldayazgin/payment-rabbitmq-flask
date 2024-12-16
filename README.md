@@ -1,0 +1,3 @@
+This system processes payments using RabbitMQ and Flask. The user sends a payment request through the /make-payment endpoint, which sends the data to the payment queue. A consumer processes the payment and sends a notification to the notification queue, where another consumer sends a confirmation email to the user.
+I assumed RabbitMQ is running locally and Flask-Mail is set up with Gmail. One issue I had was with Gmail’s less secure apps setting, which I had to enable for email sending. The system works properly, processing payments and sending emails.
+Link to the video: https://drive.google.com/file/d/1u8yIAr4DzTAK_p66OxNiMWIpnGmGFYEG/view?usp=sharing
